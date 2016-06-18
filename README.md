@@ -1,7 +1,7 @@
 django task - ćwiczenie
 ===============
 
-###rozwiązania django i python tasków
+###zaczynamy od utworzenia katalogu roboczego: 
 
 mkdir roboczy
 
