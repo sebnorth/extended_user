@@ -3,8 +3,6 @@ django task - ćwiczenie
 
 ###The solution to django-task
 
-cd C:\Users\sebnorth\workspace\django\roboczy
-
 mkdir roboczy
 
 cd roboczy
