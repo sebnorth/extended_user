@@ -1,4 +1,4 @@
-django task - cwiczenie
+django task - ćwiczenie
 ===============
 
 ###The solution to django-task
