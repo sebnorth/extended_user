@@ -1,7 +1,7 @@
 django task - ćwiczenie
 ===============
 
-###The solution to django-task
+###rozwiązania django i python tasków
 
 mkdir roboczy
 
