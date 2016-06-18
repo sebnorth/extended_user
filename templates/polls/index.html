@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% load polls_helpers %}
+
+{% block content %}
+
+<h3><a href="{% url 'polls:create_choice' %}">CREATE OBJECT</a></h3>
+
+<table style="width:100%">
+      </tr>
+    <tr>
+    <td><b>Username</b></td>
+    <td><b>Update User</b></td> 
+    <td><b>Delete User</b></td>
+    <td><b>Birthday</b></td>
+    <td><b>Eligible</b></td> 
+    <td><b>Random Number</b></td>
+    <td><b>BizzFuzz</b></td>
+  </tr>
+    {% for choice in lista_c %}
+  <tr>
+    <td><a href="{% url 'polls:detail' choice.id %}">{{ choice.user.username }}</a> </td>
+    <td><a href="{% url 'polls:update' choice.id %}">UPDATE {{ choice.user.username }}</td> 
+    <td><a href="{% url 'polls:delete' choice.id %}">  DELETE {{ choice.user.username }}</a></td>
+    <td>{{choice.dob | date:'d/m/Y' }} </td>
+    <td>status: {% allowed choice  %}</td> 
+    <td>{{ choice.rumber }}</td>
+    <td>{% BizzFuzzTag choice.rumber %}</td>
+      {% endfor %}
+</table>
+
+{% if lista_c %}
+<h3><a href="{% url 'polls:some_view' %}">POBIERZ plik CSV z powyższej tabeli</a></h3>
+{% endif %}
+{% endblock %}
+

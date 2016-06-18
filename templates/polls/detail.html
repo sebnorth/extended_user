@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load polls_helpers %}
+
+{% block content %}
+{% if c%}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+USERNAME:   {{ c.user.username }}</br>
+DOB:   {{c.dob |date:'d/m/Y' }} </br>
+RANDOM_NUMBER {{ c.rumber }}</br>
+AGE: {% jeden c.dob  %} </br>
+STATUS A/B: {% allowed c  %}</br>
+{% endif %}
+
+{% endblock %}
